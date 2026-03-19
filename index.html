@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Calculator App</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #1e1e2f;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 10px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .calculator {
+      margin-top: 20px;
+    }
+
+    #result {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 👇 Apna image yahan lagao -->
+  <img src=" image " alt="Mo Arman"  length =  " 145 ">
+
+  <h2>Login</h2>
+
+  <!-- Gmail Login UI -->
+  <input type="email" id="email" placeholder="Enter Gmail">
+  <br>
+  <input type="password" id="password" placeholder="Password">
+  <br>
+  <button onclick="login()">Login</button>
+
+  <h3 id="loginStatus"></h3>
+
+  <!-- Calculator -->
+  <div class="calculator">
+    <h2>Calculator</h2>
+
+    <input type="number" id="num1" placeholder="Number 1">
+    <input type="number" id="num2" placeholder="Number 2">
+    <br>
+
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+
+    <div id="result"></div>
+  </div>
+
+</div>
+
+<script>
+  // Login Function
+  function login() {
+    let email = document.getElementById("email").value;
+
+    if (email.includes("@gmail.com")) {
+      document.getElementById("loginStatus").innerText = "Login Successful ✅";
+    } else {
+      document.getElementById("loginStatus").innerText = "Enter valid Gmail ❌";
+    }
+  }
+
+  // Calculator Functions
+  function add() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("result").innerText = a + b;
+  }
+
+  function sub() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("result").innerText = a - b;
+  }
+
+  function mul() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("result").innerText = a * b;
+  }
+
+  function div() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("result").innerText = a / b;
+  }
+</script>
+
+</body>
+</html>
+
+ 
+ 
